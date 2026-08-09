@@ -3,7 +3,7 @@
 
 cask "gobbler" do
   version "0.1.3"
-  sha256 "f2cda00f5662c543b4ba0e02effd004d5bc34ad927bf90acb1e87e9216d68825"
+  sha256 "05c464ef46140cb9ff739706bc7ee4a9b081346d8b8422c9b0bfeb15f85dd98d"
 
   url "https://github.com/OrchisLabs/gobbler-releases/releases/download/desktop-v#{version}/Gobbler-#{version}-universal.dmg",
       verified: "github.com/OrchisLabs/gobbler-releases/"
