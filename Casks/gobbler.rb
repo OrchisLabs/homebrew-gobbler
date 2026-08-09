@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "gobbler" do
-  version "0.1.2"
-  sha256 "6ca35ac5ddbd091482c61d5c1e136e6331eef16f1d388842ae7f80839b261be9"
+  version "0.1.3"
+  sha256 "f2cda00f5662c543b4ba0e02effd004d5bc34ad927bf90acb1e87e9216d68825"
 
   url "https://github.com/OrchisLabs/gobbler-releases/releases/download/desktop-v#{version}/Gobbler-#{version}-universal.dmg"
   name "Gobbler"
@@ -14,10 +14,6 @@ cask "gobbler" do
 
   app "Gobbler.app"
 
-  postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Gobbler.app"]
-  end
-
   zap trash: [
     "~/Library/Application Support/Gobbler",
     "~/Library/Caches/org.orchislabs.gobbler",
@@ -27,7 +23,8 @@ cask "gobbler" do
 
   caveats <<~EOS
     Gobbler for Mac is currently an unsigned preview.
-    This cask removes the quarantine attribute from Gobbler.app after install
-    so the unsigned preview can launch. Review the public release before use.
+    Install with --no-quarantine so the preview can launch:
+      brew install --cask --no-quarantine orchislabs/gobbler/gobbler
+    Review the public release before use.
   EOS
 end
