@@ -5,7 +5,8 @@ cask "gobbler" do
   version "0.1.3"
   sha256 "f2cda00f5662c543b4ba0e02effd004d5bc34ad927bf90acb1e87e9216d68825"
 
-  url "https://github.com/OrchisLabs/gobbler-releases/releases/download/desktop-v#{version}/Gobbler-#{version}-universal.dmg"
+  url "https://github.com/OrchisLabs/gobbler-releases/releases/download/desktop-v#{version}/Gobbler-#{version}-universal.dmg",
+      verified: "github.com/OrchisLabs/gobbler-releases/"
   name "Gobbler"
   desc "Focused desktop client for Gobbler"
   homepage "https://gobbler.org/apps"
