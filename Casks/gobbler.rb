@@ -7,7 +7,7 @@ cask "gobbler" do
   desc "Focused desktop client for Gobbler"
   homepage "https://gobbler.org/apps"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Gobbler.app"
 
