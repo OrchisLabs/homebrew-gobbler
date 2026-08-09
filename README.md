@@ -3,8 +3,11 @@
 Install the unsigned macOS preview:
 
 ```sh
-brew install --cask --no-quarantine orchislabs/gobbler/gobbler
+brew install --cask orchislabs/gobbler/gobbler
 ```
+
+The tap removes macOS quarantine from the app after installation because this
+preview is intentionally unsigned. Review the public release before installing.
 
 Upgrade later releases with:
 
