@@ -14,6 +14,11 @@ cask "gobbler" do
 
   app "Gobbler.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Gobbler.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/Gobbler",
     "~/Library/Caches/org.orchislabs.gobbler",
