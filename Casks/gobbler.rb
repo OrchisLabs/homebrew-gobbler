@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "gobbler" do
-  version "0.1.3"
-  sha256 "e0a4767ecc2116f64122d598ea04d5a3b28eb9dc03da02ff87314a6ffdf0205a"
+  version "0.2.3"
+  sha256 "d9e6417af84614e067d929e261201402fdc6a2e00bd3ef7ac32ba4de508e0f26"
 
   url "https://github.com/OrchisLabs/gobbler-releases/releases/download/desktop-v#{version}/Gobbler-#{version}-universal.dmg",
       verified: "github.com/OrchisLabs/gobbler-releases/"
